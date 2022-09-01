@@ -1,1 +1,1 @@
-my first readme
+Scripts that prints path name of current directory
