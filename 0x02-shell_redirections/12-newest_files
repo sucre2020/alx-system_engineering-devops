@@ -1,2 +1,2 @@
 #!/bin/bash
-echo ls -tp | grep -v / | head
+echo ls -lt | head
