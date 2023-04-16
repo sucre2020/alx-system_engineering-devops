@@ -1,0 +1,32 @@
+Have you ever wondered what happens when you google a site or even when you type https://www.google.com in your browser and press Enter? Instantly, we all expect to get a response, but have you ever wondered what the details encapsulated beneath the surface are?
+
+We live in a connected world. We are more connected now than we have ever been, all thanks to technology, and in today’s world, we use the internet all the time for all sorts of purposes. So let’s find out what happens when we enter a URL (Uniform Resource Locator) of a site in the search bar.
+
+When you type https://www.google.com in your browser and press Enter, the following sequence of events takes place:
+
+DNS request: The first step is for your computer to look up the IP address associated with the domain name "www.google.com" using the Domain Name System (DNS). This involves sending a DNS request to a DNS server to obtain the IP address associated with the domain name.
+Let me break this down a little: When we type the URL www. google. com into our browser (Google, Firefox, Safari, Opera Mini, et cetera) and press “Enter”, the browser will break down the URL in pieces. The browser is going to consider Google.com part first, which is a domain name. To understand what a ‘domain name’ is, first, we need to know what an ‘IP address’ is. 
+An Internet Protocol (IP) address is a unique numerical identifier for every device or network that connects to the Internet. Typically assigned by an internet service provider (ISP), an IP address is an online device address used for communicating across the internet
+
+Let’s use making a phone call as an example, Let's say you want to call your friend. You need the phone number of your friend to make the call right?
+The same principle applies to computers, computers use an IP address to communicate with each other through the Internet. If a person has a unique phone number, so does a computer. They have a unique IP address, and they have a specific format which is four numbers, from 0 to 255 separated by dots, like this; 208.80. 154.224, This is called IPv4.
+As you would save your friend’s phone number in your contact list with a name, domain names are an alphabetic representation of IP addresses. The reason we have domain names in the first place is that humans remember words better than numbers. Thankfully, the DNS is here for us to remember the IP of each domain. If the browser doesn’t know that domain name (it’s not stored in its cache), it is going to ask the Domain Name System for the IP address corresponding to this particular domain name.
+
+The DNS request first goes through the resolver. The resolver is usually our Internet Service Provider, and if it doesn’t find the IP in its cache, it’s going to request the root server. The root server knows where the TLD (Top-Level Domain) server is. In our case, the top-level domain is .com. Other types of TLD are .net, .fr, etc. If the TLD server doesn’t know the IP, it points the resolver to the Authoritative Name Servers for the domain name. Usually, there is more than one name server attached to one domain name. But any of those name servers can give the IP for the domain name they are attached to. Now the resolver has the IP address(for example, 54.172.4.191), and can send it back to the browser which will perform its request to the corresponding server.
+
+TCP/IP: Once the IP address has been obtained, a TCP/IP connection is established between your computer and the Google server. This involves a three-way handshake process to establish a reliable connection.
+
+Firewall: If you have a firewall installed on your computer, it will inspect the incoming and outgoing traffic and may block or allow traffic based on predefined rules.
+
+HTTPS/SSL: The connection between your computer and the Google server is secured using HTTPS (HyperText Transfer Protocol Secure) and SSL (Secure Socket Layer) protocols. This ensures that the data being transmitted is encrypted and cannot be intercepted by third parties.
+
+Load-balancer: Google uses load balancers to distribute the incoming requests across multiple servers to ensure that the load is evenly distributed and that no single server becomes overloaded.
+
+Web server: Once the request has been received by the Google server, it is processed by a web server, which generates an HTML page that can be displayed in your browser.
+
+Application server: The web server may communicate with one or more application servers, which are responsible for processing dynamic content and generating the HTML page.
+
+Database: The application servers may communicate with one or more databases to retrieve data that is needed to generate the HTML page. This data may include search results, user account information, or other data that is specific to the user's request.
+
+In summary, when you type https://www.google.com in your browser and press Enter, a complex series of interactions occur between your computer and the Google servers, involving DNS requests, TCP/IP connections, firewalls, HTTPS/SSL encryption, load balancers, web servers, application servers, and databases.
+Thank you for reading.
